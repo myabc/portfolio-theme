@@ -1,0 +1,15 @@
+<h2 class="dayheading">$utils.formatDate($day, "MMM dd, yyyy")</h2> 
+#foreach($entry in $entries)
+  <h2 class="entryheading">
+    <img src=$url.resource("images/aquadot.jpg") />&nbsp;
+    <a href="$url.entry($entry.anchor)">$entry.title</a>
+  </h2>
+  <p>$utils.formatDate($entry.pubTime, "HH:MMa z") by $entry.creator.fullName</p>  
+  <p>
+  #if($model.permalink)
+    $entry.displayContent
+  #else
+    $entry.displayContent($url.entry($entry.anchor))
+  #end
+  </p>
+#end

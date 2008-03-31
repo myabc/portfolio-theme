@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogtheme>    
+    <id>example1</id> 
+    <name>Example1: minimal theme</name>
+    <author>Dave Johnson</author>     
+    <preview-image path="preview.jpg" />
+    
+    <stylesheet>
+        <name>Override</name>
+        <description>Stylesheet override</description>
+	<link>override.css</link>
+        <templateLanguage>velocity</templateLanguage>
+        <contentsFile>override.css</contentsFile>
+    </stylesheet>
+    
+    <template action="weblog">
+        <name>Weblog</name>
+        <description>Main template of weblog</description>
+	<link>weblog</link>
+        <navbar>false</navbar>
+        <hidden>true</hidden>
+        <templateLanguage>velocity</templateLanguage>
+        <contentType>text/html</contentType>
+        <contentsFile>weblog.vm</contentsFile>
+    </template>
+    
+    <template action="custom">
+        <name>_day</name>
+        <description>Displays one day of entries</description>
+        <link>_day</link>
+        <navbar>false</navbar>
+        <hidden>true</hidden>
+        <templateLanguage>velocity</templateLanguage>
+        <contentType>text/html</contentType>
+        <contentsFile>day.vm</contentsFile>
+    </template>
+    
+    <template action="custom">
+        <name>About</name>
+        <description>About this weblog...</description>
+	<link>about</link>
+        <navbar>true</navbar>
+        <hidden>false</hidden>
+        <templateLanguage>velocity</templateLanguage>
+        <contentType>text/html</contentType>
+        <contentsFile>about.vm</contentsFile>
+    </template>
+    
+    <resource path="images/aquadot.jpg" />   
+</weblogtheme>
